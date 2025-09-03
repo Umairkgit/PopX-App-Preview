@@ -13,7 +13,6 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  // Redirect to profile if already authenticated
   useEffect(() => {
     if (isAuthenticated) {
       navigate('/profile');
@@ -27,7 +26,6 @@ const Login = () => {
       [name]: value
     }));
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -67,7 +65,6 @@ const Login = () => {
     setErrors({});
     
     try {
-      // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const user = authenticateUser(formData.email, formData.password);

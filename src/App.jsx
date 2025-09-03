@@ -6,7 +6,6 @@ import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import { AuthProvider, useAuth } from './context/AuthContext'
 
-// Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
   
@@ -72,13 +71,11 @@ const AppRoutes = () => {
         } 
       />
       
-      {/* Catch all route - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
 
-// Main App Component
 const App = () => {
   return (
     <AuthProvider>

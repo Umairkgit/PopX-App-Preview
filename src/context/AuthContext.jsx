@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Create Authentication Context
 const AuthContext = createContext();
 
 // Authentication Provider Component

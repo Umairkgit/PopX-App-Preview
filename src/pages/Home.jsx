@@ -6,7 +6,6 @@ const Home = () => {
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
 
-  // Redirect to profile if already authenticated
   useEffect(() => {
     if (isAuthenticated) {
       navigate('/profile');
